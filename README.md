@@ -2,10 +2,7 @@
 Final Projek OS Server &amp; Sistem Admin 
 
 # Keterangan
-NAMA : Muhammad Zidan Manulana
-NIM : 23.83.1022
-Tanggal 5 Desember 2024
+<b> NAMA : Muhammad Zidan Manulana </b>
+<b> NIM : 23.83.1022 </b>
+<b> Tanggal 5 Desember 2024 </b>
 
-Update and Upgrade
-1. Open a terminal and run the following commands:
-sudo apt update && sudo apt upgrade -y
