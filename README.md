@@ -51,5 +51,3 @@ Final Projek OS Server &amp; Sistem Admin
 - <b>7. Mengecek firewall yang sedang digunakan</b>
   - `sudo ufw status`
  
-
-<h2> Download dan Konfigurasi apache</h2>
