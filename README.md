@@ -6,8 +6,6 @@ Final Projek OS Server &amp; Sistem Admin
 
 <b>NIM     : 23.83.1022</b>
 
-<b>Tanggal : 5 Desember 2024</b>
-
 # Spesifikasi Sistem Operasi
 <b>Ubuntu Server 22.04.3</b>
 
@@ -21,6 +19,12 @@ Final Projek OS Server &amp; Sistem Admin
 
 <!---------------------------------------------------------------------- SECTION BREAK ---------------------------------------------------------------------->
 
+# Layanan Server
+<a href="#ssh">1. SSH</a> <br>
+
+
+<!---------------------------------------------------------------------- SECTION BREAK ---------------------------------------------------------------------->
+
 # Langkagh-langkah
 
 <h2> Update and Upgrade</h2>
@@ -28,7 +32,7 @@ Final Projek OS Server &amp; Sistem Admin
 - <b>1. Open a terminal and run the following commands:</b>
   - `sudo apt update && sudo apt upgrade -y`
 
-<h2> OPEN SSH</h2>
+<h2 id="ssh"> OPEN SSH</h2>
 
 - <b>1. Install openssh</b>
   - `sudo apt install openssh-server ufw`
