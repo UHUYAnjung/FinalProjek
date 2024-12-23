@@ -21,6 +21,10 @@ Final Projek OS Server &amp; Sistem Admin
 
 # Layanan Server
 <a href="#ssh">1. SSH</a> <br>
+<a href="#apache">1. apache2</a> <br>
+<a href="#ssh">1. SSH</a> <br>
+<a href="#ssh">1. SSH</a> <br>
+<a href="#ssh">1. SSH</a> <br>
 
 
 <!---------------------------------------------------------------------- SECTION BREAK ---------------------------------------------------------------------->
@@ -55,3 +59,42 @@ Final Projek OS Server &amp; Sistem Admin
 - <b>7. Mengecek firewall yang sedang digunakan</b>
   - `sudo ufw status`
  
+<!---------------------------------------------------------------------- SECTION BREAK ---------------------------------------------------------------------->
+
+<h2 id="apache"> Install dan Konfigurasi apache2</h2>
+
+- <b>1. Install apache2</b>
+  - `sudo apt install apache2 -y`
+ 
+- <b>2. Periksa status apache</b>
+  - `sudo systemctl status apache2`
+ 
+- <b>3. Konfigurasi firewall</b>
+  - `sudo ufw allow 'Apache Full'`
+ 
+- <b>4. Cek status</b>
+  - `sudo ufw status`
+ 
+- <b>5. Buat direktori untuk situs web</b>
+  - `sudo mkdir -p /var/www/example.com'
+  - 'sudo chown -R $USER:$USER /var/www/example.com'
+  - 'sudo chmod -R 755 /var/www/example.com`
+ 
+- <b>6. Buat file konfigurasi virtual host</b>
+  - `sudo nano /etc/apache2/sites-available/example.com.conf`
+ 
+- <b>7. Tambahkan konfigurasi berikut</b>
+  - `<VirtualHost *:80>
+    ServerAdmin admin@example.com
+    ServerName example.com
+    ServerAlias www.example.com
+    DocumentRoot /var/www/example.com
+    ErrorLog ${APACHE_LOG_DIR}/error.log
+    CustomLog ${APACHE_LOG_DIR}/access.log combined
+    </VirtualHost>`
+
+-  <b>8. Aktifkan Virtual Host</b>
+  - `sudo a2ensite example.com.conf`
+  
+-  <b>9. Reload Apache</b>
+  - `sudo systemctl reload apache2`
