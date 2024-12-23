@@ -21,10 +21,10 @@ Final Projek OS Server &amp; Sistem Admin
 
 # Layanan Server
 <a href="#ssh">1. SSH</a> <br>
-<a href="#apache">1. apache2</a> <br>
-<a href="#ssh">1. SSH</a> <br>
-<a href="#ssh">1. SSH</a> <br>
-<a href="#ssh">1. SSH</a> <br>
+<a href="#apache">2. apache2</a> <br>
+<a href="#data">3. database server mariadb, php, phpmyadmin</a> <br>
+<a href="#monitoring">4. netdata</a> <br>
+<a href="#nextcloud">5. nextcloud</a> <br>
 
 
 <!---------------------------------------------------------------------- SECTION BREAK ---------------------------------------------------------------------->
@@ -76,25 +76,33 @@ Final Projek OS Server &amp; Sistem Admin
   - `sudo ufw status`
  
 - <b>5. Buat direktori untuk situs web</b>
-  - `sudo mkdir -p /var/www/example.com'
-  - 'sudo chown -R $USER:$USER /var/www/example.com'
-  - 'sudo chmod -R 755 /var/www/example.com`
+   ```
+   sudo mkdir -p /var/www/example.com
+   sudo chown -R $USER:$USER /var/www/example.com
+   sudo chmod -R 755 /var/www/example.com
+   ```
  
 - <b>6. Buat file konfigurasi virtual host</b>
   - `sudo nano /etc/apache2/sites-available/example.com.conf`
  
 - <b>7. Tambahkan konfigurasi berikut</b>
-  - `<VirtualHost *:80>
-    ServerAdmin admin@example.com
-    ServerName example.com
-    ServerAlias www.example.com
-    DocumentRoot /var/www/example.com
-    ErrorLog ${APACHE_LOG_DIR}/error.log
-    CustomLog ${APACHE_LOG_DIR}/access.log combined
-    </VirtualHost>`
+   ```
+    <VirtualHost *:80>
+      ServerAdmin admin@example.com
+      ServerName example.com
+      ServerAlias www.example.com
+      DocumentRoot /var/www/example.com
+      ErrorLog ${APACHE_LOG_DIR}/error.log
+      CustomLog ${APACHE_LOG_DIR}/access.log combined
+    </VirtualHost>
+   ```
 
 -  <b>8. Aktifkan Virtual Host</b>
   - `sudo a2ensite example.com.conf`
   
 -  <b>9. Reload Apache</b>
   - `sudo systemctl reload apache2`
+
+<h2 id="data"> Install dan Konfigurasi mingdb, php, phpmyadmin</h2>
+<h2 id="monitoring"> Install dan Konfigurasi netdata</h2>
+<h2 id="nextcloud"> Install nextcloud</h2>
