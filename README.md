@@ -103,6 +103,8 @@ Final Projek OS Server &amp; Sistem Admin
 -  <b>9. Reload Apache</b>
   - `sudo systemctl reload apache2`
 
+![Screenshot 2024-12-15 193449](https://github.com/user-attachments/assets/3a03ba14-1152-41f4-a852-6595ce0a34e9)
+
 <!---------------------------------------------------------------------- SECTION BREAK ---------------------------------------------------------------------->
 
 <h2 id="data"> Install dan Konfigurasi mingdb, php, phpmyadmin</h2>
@@ -131,6 +133,8 @@ Final Projek OS Server &amp; Sistem Admin
 phpinfo();
 ?>
 ```
+
+![Screenshot 2024-12-15 194900](https://github.com/user-attachments/assets/c7a1c092-8bac-4c38-9c73-6c585eefd81b)
  
 - <b>8. Instalasi dan Konfigurasi Phpmyadmin</b>
   - `apt-get install phpmyadmin`
@@ -181,3 +185,10 @@ phpinfo();
  
 - <b>4. ubah kepemilikan menjadi apache</b>
   - `sudo chown -R www-data:www-data nextcloud`
+    
+
+- <b>5. kita coba terlebih dahulu                </b>
+  ![Screenshot 2024-12-15 211235](https://github.com/user-attachments/assets/ac41712f-f7a2-44aa-8d28-4cd519578196)
+ 
+- <b>6. sudah berhasil masuk ke dasboard nextcloud</b>
+  ![Screenshot 2024-12-15 214539](https://github.com/user-attachments/assets/455efa93-ae26-44a2-8cab-beee7119f78d)
