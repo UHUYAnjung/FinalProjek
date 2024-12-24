@@ -103,6 +103,81 @@ Final Projek OS Server &amp; Sistem Admin
 -  <b>9. Reload Apache</b>
   - `sudo systemctl reload apache2`
 
+<!---------------------------------------------------------------------- SECTION BREAK ---------------------------------------------------------------------->
+
 <h2 id="data"> Install dan Konfigurasi mingdb, php, phpmyadmin</h2>
+
+- <b>1. Instalasi MariaDB</b>
+  - `sudo apt-get install mariadb-server`
+ 
+- <b>2. enable Paket MariaDB</b>
+  - `sudo systemctl enable mariadb`
+ 
+- <b>3. Konfigurasi MariaDB</b>
+  - `mysql_secure_installation`
+
+- <b>4. Instalasi Php</b>
+  - `sudo apt install php php8.3-common php8.3-cli php8.3-mbstring php8.3-imap php8.3-redis php8.3-snmp php8.3-xml php8.3-zip php8.3-curl php8.3-mysql php8.3-gdr`
+ 
+- <b>5. Konfigurasi Php</b>
+  - `cd /var/www/html/`
+ 
+- <b>6. lalu Isi file tersebut dengan</b>
+  - `sudo vi info.php`
+ 
+- <b>7. Instalasi MariaDB</b>
+```
+  <?php
+phpinfo();
+?>
+```
+ 
+- <b>8. Instalasi dan Konfigurasi Phpmyadmin</b>
+  - `apt-get install phpmyadmin`
+ 
+- <b>9. lalu Restart Layanan Apache2</b>
+  - `systemctl restart apache2`
+
+<!---------------------------------------------------------------------- SECTION BREAK ---------------------------------------------------------------------->
+
 <h2 id="monitoring"> Install dan Konfigurasi netdata</h2>
+
+- <b>1. Install Netdata</b>
+  - `sudo apt install netdata -y`
+ 
+- <b>2. Izinkan Firewall untuk tcp default netdata</b>
+  - `sudo ufw allow 19999/tcp`
+ 
+- <b>3. konfigurasi netdata</b>
+  - `nano /etc/netdata/netdata.conf`
+ 
+- <b>4. systemctl restart netdata</b>
+  - `systemctl restart netdata`
+  
+<!---------------------------------------------------------------------- SECTION BREAK ---------------------------------------------------------------------->
+
 <h2 id="nextcloud"> Install nextcloud</h2>
+
+- <b>1. Install nextcloud</b>
+  - `sudo wget https://download.nextcloud.com/server/releases/latest.zip`
+ 
+- <b>2. install dulu unzip dengan printah</b>
+  - `sudo apt install unzip `
+ 
+- <b>3. baru unzip file menggunak printah</b>
+  - `sudo unzip letes.zip`
+ 
+- <b>4. ubah kepemilikan menjadi apache</b>
+  - `sudo chown -R www-data:www-data nextcloud`
+  
+- <b>1. buat akun admin nextcloud</b>
+  - `192.168.100.71/nextcloud/`
+ 
+- <b>2. install dulu unzip dengan printah</b>
+  - `sudo apt install unzip `
+ 
+- <b>3. baru unzip file menggunak printah</b>
+  - `sudo unzip letes.zip`
+ 
+- <b>4. ubah kepemilikan menjadi apache</b>
+  - `sudo chown -R www-data:www-data nextcloud`
